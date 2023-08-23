@@ -12,6 +12,7 @@ def func_config():
     parser = argparse.ArgumentParser()
     parser.add_argument('--max_epochs', type=int, default=100)
     parser.add_argument('--batch_size', type=int, default=20)
+    parser.add_argument('--gpus', type=int, default=2)
     args = parser.parse_args()
     return args
 

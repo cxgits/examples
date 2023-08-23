@@ -18,6 +18,7 @@ if __name__ == '__main__':
     trainer = Trainer(max_epochs=args.max_epochs,
                       logger=TensorBoardLogger("logs"),
                       accelerator="gpu",
+		      gpus=args.gpus,
                       default_root_dir='checkpoint',
                       callbacks=[pl.callbacks.ModelCheckpoint(every_n_train_steps=100, save_top_k=-1)]
                       )
